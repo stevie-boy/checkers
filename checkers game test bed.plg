@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: checkers game test bed - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Steve\LOCALS~1\Temp\RSP17.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/checkers game test bed.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\My Documents\ITT\C++\C++II\checkers game project\checkers game test bed\CheckerBoard.cpp"
+"D:\My Documents\ITT\C++\C++II\checkers game project\checkers game test bed\CheckerPlayer.cpp"
+"D:\My Documents\ITT\C++\C++II\checkers game project\checkers game test bed\main.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Steve\LOCALS~1\Temp\RSP17.tmp" 
+Creating temporary file "C:\DOCUME~1\Steve\LOCALS~1\Temp\RSP18.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/checkers game test bed.pdb" /debug /machine:I386 /out:"Debug/checkers game test bed.exe" /pdbtype:sept 
+".\Debug\CheckerBoard.obj"
+".\Debug\CheckerPlayer.obj"
+".\Debug\main.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Steve\LOCALS~1\Temp\RSP18.tmp"
+<h3>Output Window</h3>
+Compiling...
+CheckerBoard.cpp
+CheckerPlayer.cpp
+main.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+checkers game test bed.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
