@@ -3,7 +3,7 @@
 #ifndef CHECKER_BOARD_H
 #define CHECKER_BOARD_H
 
-#include "Common Resources.h"
+#include "CommonResources.h"
 using namespace CommonResources;
 
 #include <string>

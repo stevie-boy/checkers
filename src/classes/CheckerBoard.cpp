@@ -10,7 +10,7 @@ using std::setw;
 
 #include <windows.h>
 
-#include "Common Resources.h"
+#include "CommonResources.h"
 #include "CheckerBoard.h"
 using namespace CommonResources;
 
@@ -83,7 +83,7 @@ void CheckerBoard::drawBoard( string name1, string name2 )
 	
 	//Draws the capture piles.  The first is tabbed once and spaced over 7 spaces.
 	//The second is spaced once.
-	for ( i = 0; i < 4; ++i )
+	for ( int i = 0; i < 4; ++i )
 	{ 
 		cout << "\t       " << player1Capture[i] << " " << player2Capture[i] << endl; 
 	}
@@ -198,7 +198,7 @@ void CheckerBoard::printSquares()
 	if ( c == 'y')
 		return;
 
-	for ( y = 4; y < 8; ++y )
+	for ( int y = 4; y < 8; ++y )
 	{
 		for ( int x = 0; x < 8; ++ x )
 		{

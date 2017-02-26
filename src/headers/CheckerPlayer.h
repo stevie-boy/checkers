@@ -6,7 +6,7 @@
 #include <string>
 using std::string;
 
-#include "Common Resources.h"
+#include "CommonResources.h"
 using namespace CommonResources;
 
 class CheckerPlayer
