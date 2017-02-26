@@ -5,6 +5,9 @@
 
 using namespace std;
 
+#include <stdlib.h>
+using ::atoi;
+
 #include "CheckerBoard.h"
 #include "CheckerPlayer.h"
 
@@ -22,7 +25,7 @@ CheckerBoard cBoard;
 vector< CheckerPlayer >checkerPlayers(2);
 int currentPlayer = 0, waitingPlayer = 1; //Represents the current player and the other player.
 
-void main()
+int main()
 {
 	char ans = 'y';
 
@@ -136,13 +139,13 @@ Coordinates enterCoordinates()
 			cout << "\nEnter the coordinates of the piece you would like to move.\nEnter x coordinate===>  ";
 	
 			cin.getline( coordinates, 2 );
-			coord.from.x = atoi( coordinates );
+			coord.from.x = ::atoi( coordinates );
 			clear_istream( cin );
 
 			cout << "Enter y coordinate===>  ";
 			cin.getline( coordinates, 2 );
 			clear_istream( cin );
-			coord.from.y = atoi( coordinates );
+			coord.from.y = ::atoi( coordinates );
 
 			redrawBoard();
 				
@@ -151,12 +154,12 @@ Coordinates enterCoordinates()
 
 			cin.getline( coordinates, 2 );
 			clear_istream( cin );
-			coord.to.x = atoi( coordinates );
+			coord.to.x = ::atoi( coordinates );
 
 			cout << "Enter y coordinate===>  ";
 			cin.getline( coordinates, 2 );
 			clear_istream( cin );
-			coord.to.y = atoi( coordinates );
+			coord.to.y = ::atoi( coordinates );
 
 			result = cBoard.validateCoordinates( coord, checkerPlayers[ currentPlayer ].getPlayerID() );
 
@@ -211,7 +214,7 @@ inline bool checkForJumps()
 			cout << "\n\nEnter your choice.\n===>  ";
 			cin.getline( chc, 2 );
 			clear_istream( cin );
-			choice = atoi( chc );
+			choice = ::atoi( chc );
 
 			if ( choice <= 0 || choice > numElements )
 			{	
@@ -259,7 +262,7 @@ inline bool checkForJumps()
 			cout << "\n\nEnter your choice.\n===>  ";
 			cin.getline( chc, 2 );
 			clear_istream( cin );
-			choice = atoi( chc );
+			choice = ::atoi( chc );
 
 			if ( choice <= 0 || choice > numElements )
 			{	
