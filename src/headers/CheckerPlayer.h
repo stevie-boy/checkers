@@ -14,7 +14,7 @@ class CheckerPlayer
 public:
 	CheckerPlayer();
 	CheckerPlayer( Players, string );
-	//public funtions
+	//public functions
 	void setPlayerID( int );
 	void setPlayerID( Players );
 	Players getPlayerID() const;
