@@ -16,10 +16,10 @@ using namespace CommonResources;
 
 
 char CheckerBoard::xCoordinates[49] = { "\t\t       0    1    2    3    4    5    6    7  \n" };
-char CheckerBoard::yCoordinates[25] = { " 0  1  2  3  4  5  6  7" };
+char CheckerBoard::yCoordinates[25] = { " 0  1  2  3  4  5  6  7 " };
                                                                                          
 char CheckerBoard::border[49] =	    "\t\t     ----------------------------------------\n";
-char CheckerBoard::checkerBoard[24][44] = { "|     *****     *****     *****     *****|\n",
+char CheckerBoard::checkerBoard[24][44] =                                             { "|     *****     *****     *****     *****|\n",
 											"|     *****     *****     *****     *****|\n",
 											"|     *****     *****     *****     *****|\n",
 											"|*****     *****     *****     *****     |\n",
