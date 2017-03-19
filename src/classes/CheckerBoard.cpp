@@ -51,9 +51,9 @@ char CheckerBoard::player2Capture[3][27] = { "--------------------------",
 											 "|                        |",
 											 "--------------------------" };
 
-const char CheckerBoard::PLAYER_1_PAWN = char(1);
+const char CheckerBoard::PLAYER_1_PAWN = 'a';
 const char CheckerBoard::PLAYER_1_KING = 'K';
-const char CheckerBoard::PLAYER_2_PAWN = char(2);
+const char CheckerBoard::PLAYER_2_PAWN = 'b';
 const char CheckerBoard::PLAYER_2_KING = 'k';
 
 //Constructor
