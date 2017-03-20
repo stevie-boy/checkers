@@ -5,17 +5,23 @@ SCRIPT_DIR=$(dirname "$0")
 
 . ${SCRIPT_DIR}/common.sh
 
+EXTRA_OPTS=
+CURRENT_DIR=$(pwd)
 BUILD_PARENT=${PROJECT_ROOT}/build
-COMPILE_OUT_DIR=
 BUILD_OUT_DIR=
 
+
 if [ "$1" == "debug" ]; then
-	COMPILE_OUT_DIR=$COMPILE_DEBUG_OUT_DIR
+	EXTRA_OPTS=$DEBUG_OPTS
 	BUILD_OUT_DIR=${BUILD_PARENT}/debug
-else
-	COMPILE_OUT_DIR=$COMPILE_PROD_OUT_DIR
+else 
 	BUILD_OUT_DIR=${BUILD_PARENT}/prod
 fi
 
-g++ ${COMPILE_OUT_DIR}/*.o -o ${BUILD_OUT_DIR}/checkers.exe
+# create output dir if necessary
+if [ ! -d $BUILD_OUT_DIR ]; then
+	mkdir $BUILD_OUT_DIR
+fi
+
+g++ -I${PROJECT_ROOT}/src/headers ${EXTRA_OPTS} -o ${BUILD_OUT_DIR}/checkers.exe ${PROJECT_ROOT}/src/classes/*.cpp
 
