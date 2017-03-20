@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm -rf build/* && rm -rf bin/*
+rm -f build/debug/* build/prod/*
 
