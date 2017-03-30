@@ -29,7 +29,7 @@ int main()
 {
 	checkerPlayers[0].setPlayerID( 1 );
 	checkerPlayers[1].setPlayerID( 2 );
-
+	CheckerBoard::clearScreenWin_Nix();
 	displayMessage();
 	cin.get();
 	CheckerBoard::clearScreenWin_Nix();
@@ -71,14 +71,14 @@ inline void enter_player_names()
 	cin >> name;
 	checkerPlayers[0].setPlayerName( name );
 	clear_istream( cin );
-	cBoard.clearScreen();
+	CheckerBoard::clearScreenWin_Nix();
 	
 	//Enter player 2 name.
 	cout << "\n\n\tEnter a name for Player 2.\n\t===> ";
 	cin >> name;
 	checkerPlayers[1].setPlayerName( name );
 	clear_istream( cin );
-	cBoard.clearScreen();
+	CheckerBoard::clearScreenWin_Nix();
 }
 
 void clear_istream(istream& isIn)        // Clears istream object
@@ -308,8 +308,8 @@ void displayMessage()
 		cout <<	"    as I mentioned above.  The game is based on coordinates that both" << endl;
 		cout <<	"    players will be using.  The coordinates will remain the same throughout" << endl;
 		cout <<	"    the entire game.  Player one will be the first to move and player one's" << endl;
-		cout << "    will be the ones on the top.  Player two will move second and this" << endl;
-		cout << "    player's pieces will be on the bottom.  With our ability to error check" << endl;
+		cout << "    will be the ones on the bottom.  Player two will move second and this" << endl;
+		cout << "    player's pieces will be on the top.  With our ability to error check" << endl;
 		cout << "    both players will not be able to move in a direction that is invalid" << endl;
 		cout << "    Like ordinary checkers there can be only one winner and no" << endl;
 		cout << "    ties.  The players are able to play until one player wins.  The players" << endl;
