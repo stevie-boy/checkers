@@ -12,6 +12,7 @@ using std::setw;
 
 #include "CommonResources.h"
 #include "CheckerBoard.h"
+#include <cstdlib>
 using namespace CommonResources;
 
 
@@ -102,6 +103,17 @@ void CheckerBoard::clearScreen()
 
 	SetConsoleCursorPosition(hStdOut, coord);
 }
+
+// discouraged cross-platform way to clear screen.
+// TODO: do something better
+void CheckerBoard::clearScreenWin_Nix()
+{
+	if (system("clear & CLS")) // if CLS returns non-zero (not successful) then try clear
+	{
+		system("clear");
+	}
+}
+
 
 //Puts the pieces on the board for the beginning of the game.
 void CheckerBoard::initializeBoard()

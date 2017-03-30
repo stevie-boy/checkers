@@ -23,6 +23,7 @@ public:
 	CheckerBoard();
 	static void drawBoard( string, string );
 	static void clearScreen();
+	static void clearScreenWin_Nix();
 	void initializeBoard();
 	void printSquares();
 	void moveChecker( Coordinates );

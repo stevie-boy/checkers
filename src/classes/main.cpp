@@ -27,14 +27,12 @@ int currentPlayer = 0, waitingPlayer = 1; //Represents the current player and th
 
 int main()
 {
-	char ans = 'y';
-
 	checkerPlayers[0].setPlayerID( 1 );
 	checkerPlayers[1].setPlayerID( 2 );
 
 	displayMessage();
 	cin.get();
-	cBoard.clearScreen();
+	CheckerBoard::clearScreenWin_Nix();
 
 	enter_player_names(); //Allow the players to enter their names.
 
@@ -176,7 +174,7 @@ Coordinates enterCoordinates()
 //Clears the screen then draws the board
 inline void redrawBoard()
 {
-	CheckerBoard::clearScreen();
+	CheckerBoard::clearScreenWin_Nix();
 	CheckerBoard::drawBoard( checkerPlayers[0].getPlayerName(), checkerPlayers[1].getPlayerName() );
 	cout << checkerPlayers[ currentPlayer ].getPlayerName() << "'s turn\n";
 }
