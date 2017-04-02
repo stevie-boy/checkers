@@ -108,9 +108,9 @@ void CheckerBoard::clearScreen()
 // TODO: do something better
 void CheckerBoard::clearScreenWin_Nix()
 {
-	if (system("clear & CLS")) // if CLS returns non-zero (not successful) then try clear
+	if (system("clear")) // if CLS returns non-zero (not successful) then try clear
 	{
-		system("clear");
+		system("cls");
 	}
 }
 
