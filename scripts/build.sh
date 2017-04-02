@@ -16,6 +16,7 @@ if [ "$1" == "debug" ]; then
 	BUILD_OUT_DIR=${BUILD_PARENT}/debug
 else 
 	BUILD_OUT_DIR=${BUILD_PARENT}/prod
+	EXTRA_OPTS=$RELEASE_OPTS
 fi
 
 # create output dir if necessary
